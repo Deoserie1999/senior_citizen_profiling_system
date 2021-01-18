@@ -204,6 +204,7 @@
     <Content Include="dist\js\adminlte.js.map" />
     <Content Include="dist\js\adminlte.min.js.map" />
     <Content Include="Pages\Home.aspx" />
+    <Content Include="Pages\RegisteredSenior.aspx" />
     <Content Include="plugins\bootstrap-colorpicker\css\bootstrap-colorpicker.css.map" />
     <Content Include="plugins\bootstrap-colorpicker\css\bootstrap-colorpicker.min.css.map" />
     <Content Include="plugins\bootstrap-colorpicker\js\bootstrap-colorpicker.js.map" />
@@ -2214,6 +2215,13 @@
     </Compile>
     <Compile Include="Pages\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegisteredSenior.aspx.cs">
+      <DependentUpon>RegisteredSenior.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RegisteredSenior.aspx.designer.cs">
+      <DependentUpon>RegisteredSenior.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\SeniorRegistration.aspx.cs">
       <DependentUpon>SeniorRegistration.aspx</DependentUpon>
