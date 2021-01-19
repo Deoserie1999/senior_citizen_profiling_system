@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SeniorRegistration.aspx.cs" Inherits="SCProfilingSystem.Pages.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SeniorProfile.aspx.cs" Inherits="SCProfilingSystem.Pages.SeniorProfile" %>
 
 <!DOCTYPE html>
 
@@ -7,7 +7,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <title>Senior Citizen Registration Form</title>
+        <title>Senior Citizen Profile</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
@@ -131,57 +131,57 @@
                   </nav>
               </div>
             </aside>
-           
+
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <div class="container-fluid">
                         <div class="row mb-2">
                             <div class="col-sm-6">
-                                <h1>Senior Citizen Registration Form</h1>
+                                <h1>Senior Citizen Profile</h1>
                             </div>
                             <div class="col-sm-6">
                                 <ol class="breadcrumb float-sm-right">
                                     <li class="breadcrumb-item"><a href="Home.aspx">Home</a></li>
-                                    <li class="breadcrumb-item active">Register Senior Citizen</li>
+                                    <li class="breadcrumb-item active">Register Senior Profile</li>
                                 </ol>
                             </div>
                         </div>
                     </div>
                 </section>
 
-
-                <!-- Main content -->
                 <section class="content">
                     <div class="container-fluid">
                         <div class="card card-default">
-                            <div class="card-header">
-                                <h3 class="card-title">Register Senior Citizen</h3>
-                            </div>
-
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-6">
+
                                         <div class="col-md-5">
                                             <div class="form-group">
                                             <label class="lead" for="SeniorID">Senior Citizen ID No.</label>
-                                            <asp:TextBox ID="SeniorID" placeholder="Senior Citizen ID No" class="form-control" runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="SeniorID" class="form-control" disabled="" runat="server"></asp:TextBox>
                                             </div>
                                         </div>
 
                                         <div class="col-md-11">
+
                                             <div class="form-group">
                                                 <label class="lead" for="txtfirstname">Full Name</label>
-                                                <asp:TextBox ID="txtfirstname"  placeholder="First Name" class="form-control" runat="server"></asp:TextBox>
+                                                <p>First Name</p>
+                                                <asp:TextBox ID="txtfirstname" class="form-control" disabled="" runat="server"></asp:TextBox>         
                                             </div>
 
                                             <div class="form-group">
-                                                <asp:TextBox ID="txtmiddlename"  placeholder="Middle Name" class="form-control" runat="server"></asp:TextBox>
+                                                <p>Middle Name</p>
+                                                <asp:TextBox ID="txtmiddlename" class="form-control" disabled="" runat="server"></asp:TextBox>
                                             </div>
 
                                             <div class="form-group">
-                                                <asp:TextBox ID="txtlastname"  placeholder="Last Name" class="form-control" runat="server"></asp:TextBox>
+                                                <p>Last Name</p>
+                                                <asp:TextBox ID="txtlastname" class="form-control" disabled="" runat="server"></asp:TextBox>
                                             </div>
+
                                         </div>
 
                                         <div class="col-md-12">
@@ -196,93 +196,90 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="txtDob" class="lead">Date of Birth:</label>
-                                                 <asp:TextBox runat="server" ID="txtDob" TextMode="Date"></asp:TextBox>
+                                                <asp:TextBox runat="server" class="form-control" disabled="" ID="txtDob"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
                                                  <div class="form-group">
                                                     <label for="rblGender" class="lead">Maritial Status</label>
-                                                    <asp:RadioButtonList  runat="server" ID="RadioButtonList1" RepeatDirection="Horizontal" CellSpacing="1" CellPadding="1" RepeatColumns="2">
+                                                    <asp:RadioButtonList  runat="server" ID="RadioButtonList1" RepeatDirection="Horizontal" CellSpacing="1" CellPadding="1" RepeatColumns="1">
                                                         <asp:ListItem>SINGLE</asp:ListItem>
-                                                    </asp:RadioButtonList>
-                                                    <asp:RadioButtonList  runat="server" ID="RadioButtonList2" RepeatDirection="Horizontal" CellSpacing="1" CellPadding="1" RepeatColumns="2">
                                                         <asp:ListItem>MARRIED</asp:ListItem>
-                                                    </asp:RadioButtonList>
-                                                    <asp:RadioButtonList  runat="server" ID="RadioButtonList3" RepeatDirection="Horizontal" CellSpacing="1" CellPadding="1" RepeatColumns="2">
                                                         <asp:ListItem>WIDOW/WIDOWER</asp:ListItem>
-                                                    </asp:RadioButtonList>
-                                                    <asp:RadioButtonList  runat="server" ID="RadioButtonList4" RepeatDirection="Horizontal" CellSpacing="1" CellPadding="1" RepeatColumns="2">
                                                         <asp:ListItem>ANNULED</asp:ListItem>
                                                     </asp:RadioButtonList>
                                                 </div>
                                             </div>
-                                            </div>
                                         </div>
+                                    </div>
 
-                                        <div class="col-md-6">
+                                    <div class="col-md-6">
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="lead" for="contactnum">Contact Number</label>
-                                                    <asp:TextBox ID="contactnum" placeholder="Contact Number" class="form-control" 
-                                                    runat="server"></asp:TextBox>
+                                                    <asp:TextBox ID="contactnum" class="form-control" 
+                                                    disabled="" runat="server"></asp:TextBox>
                                                 </div>
                                             </div>
 
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="lead" for="religion">Religion</label>
-                                                    <asp:TextBox ID="religion" placeholder="Religion" class="form-control" 
-                                                    runat="server"></asp:TextBox>
+                                                    <asp:TextBox ID="religion" class="form-control" 
+                                                    disabled="" runat="server"></asp:TextBox>
                                                 </div>
                                             </div>
 
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label class="lead" for="Address">Occupation</label>
-                                                    <asp:TextBox ID="occupation" placeholder="Occupation" class="form-control" 
-                                                    runat="server"></asp:TextBox>
+                                                    <asp:TextBox ID="occupation" class="form-control" 
+                                                    disabled="" runat="server"></asp:TextBox>
                                                 </div>
                                             </div>
 
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label class="lead" for="Address">Complete Address</label>
-                                                    <asp:TextBox ID="brgy" placeholder="Barangay" class="form-control" 
-                                                    runat="server"></asp:TextBox>
+                                                    <p>Barangay</p>
+                                                    <asp:TextBox ID="brgy" class="form-control" 
+                                                    disabled="" runat="server"></asp:TextBox>
                                                 </div>
                                                 <div class="form-group">
-                                                    <asp:TextBox ID="municipality" placeholder="Municipality" class="form-control" 
-                                                    runat="server"></asp:TextBox>
+                                                    <p>Municipality</p>
+                                                    <asp:TextBox ID="municipality" class="form-control" 
+                                                    disabled="" runat="server"></asp:TextBox>
                                                 </div>
                                                 <div class="form-group">
-                                                    <asp:TextBox ID="province" placeholder="Province" class="form-control" 
-                                                    runat="server"></asp:TextBox>
+                                                    <p>Province</p>
+                                                    <asp:TextBox ID="province" class="form-control" 
+                                                    disabled="" runat="server"></asp:TextBox>
                                                 </div>
                                             </div>
-
-                                            <div class="col-md-3">
-                                                <label for="fuPhoto" class="lead">File input</label>
-                                                    <asp:FileUpload ID="fuPhoto" runat="server" />
-                                            </div>
-
-                                            <div class="form-group">
-                                                  <div class="col-12">
-                                                     <asp:Button ID="btnregister" class="btn btn-success" 
-                                                     Style="float: right;" runat="server" Text="Register" />                                                    
-                                                  </div>
-                                             </div>
+                                          
+                                           <div class="col-md-12">
+                                                <div class="form-group float-right">
+                                                    <asp:Button ID="btnedit" CssClass="btn btn-primary"
+                                                      runat="server" Text="EDIT" />                                                    
+                                                        &nbsp;
+                                                    <asp:Button ID="btndelete" CssClass="btn btn-danger"
+                                                     runat="server" Text="DELETE" />                                                    
+                                                </div>
+                                           </div>
 
                                         </div>
-                                    
                                     </div>
                                 </div>
                             </div>
-
-                            </div>
-                        </section>
-                     </div>
+                        </div>
+                    </section>
                 </div>
-            </div>
+
+             </div>
+        </div>
     </form>
+
+
+
 
 <!-- jQuery -->
 <script src="../../plugins/jquery/jquery.min.js"></script>

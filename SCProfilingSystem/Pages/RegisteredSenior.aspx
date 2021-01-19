@@ -57,14 +57,12 @@
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
                                 <a href="SeniorRegistration.aspx" class="nav-link">
-                                    <i class="fas fa-user-plus"></i>
                                     <p>Register Senior Citizen</p>
                                 </a>
                             </li>
 
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    <i class="fas fa-user"></i>
                                     <p>Registered Senior Citizen List</p>
                                 </a>
                             </li>
