@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminLogin.aspx.cs" Inherits="SCProfilingSystem.Pages.WebForm4" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminLogin.aspx.cs" Inherits="SCProfilingSystem.Pages.WebForm4" Async="true"%>
 
 <!DOCTYPE html>
 
@@ -26,23 +26,22 @@
         <div class="card">
             <div class="card-body login-card-body">
 
-            <div class="card">
                 <div class="card-body login-card-body">
                     <p class="login-box-msg"><b>Senior Citizen Profiling System</b></p>
                     <p class="login-box-msg"><b>Sign In</b></p>
                 </div>
             <div class="input-group mb-3">
-                <asp:TextBox ID="TextBox1" class="form-control" 
+                <asp:TextBox ID="txtusername" CssClass="form-control" 
                 placeholder="Username" runat="server"></asp:TextBox>
                     <div class="input-group-append">
                         <div class="input-group-text">
-                            <span class="fas fa-envelope"></span>
+                            <span class="fa fa-user"></span>
                         </div>
                     </div>
              </div>
 
              <div class="input-group mb-3">
-                 <asp:TextBox ID="TextBox2" type="password" class="form-control" 
+                 <asp:TextBox ID="txtpassword" TextMode="Password" CssClass="form-control" 
                  placeholder="Password" runat="server"></asp:TextBox>
                     <div class="input-group-append">
                         <div class="input-group-text">
@@ -63,14 +62,13 @@
 
                 <!-- /.col -->
                 <div class="col-4">
-                    <asp:Button ID="Button1" type="submit" class="btn btn-primary btn-block" 
+                    <asp:Button ID="Button1" type="submit" UseSubmitBehavior="True" class="btn btn-primary btn-block" 
                     runat="server" Text="Sign In" />
                 </div>
           <!-- /.col -->
            </div>
            </div>
 
-            </div>
         </div>
     </div>
 </form>
