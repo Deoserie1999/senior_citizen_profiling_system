@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RegisteredSenior.aspx.cs" Inherits="SCProfilingSystem.Pages.RegisteredSenior" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ViewBudget.aspx.cs" Inherits="SCProfilingSystem.Pages.ViewBudget" %>
 
 <!DOCTYPE html>
 
@@ -6,7 +6,7 @@
 <head runat="server">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Registered Senior Citizen List</title>
+  <title>Monthly Budget</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
@@ -33,14 +33,13 @@
                 </ul>
             </nav>
 
-              <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <aside class="main-sidebar sidebar-dark-primary elevation-4">
               <!-- Brand Logo -->
                   <a href="Home.aspx" class="brand-link">
                      <img src="../img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8" />
                         <span class="brand-text font-weight-light"><b>Sapian</b></span>
                   </a>
               
-            
               <!-- Sidebar -->
               <div class="sidebar">
                   <nav class="mt-2">
@@ -62,7 +61,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="RegisteredSenior.aspx" class="nav-link">
                                     <p>Registered Senior Citizen List</p>
                                 </a>
                             </li>
@@ -103,13 +102,13 @@
                             </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="pages/layout/top-nav.html" class="nav-link">
+                                <a href="SmsAnnounce.aspx" class="nav-link">
                                     <p>Send SMS Announcement</p>
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                                <a href="CalendarPension.aspx" class="nav-link">
                                     <p>Schedule of Receiving Pension</p>
                                 </a>
                             </li>
@@ -120,18 +119,18 @@
                   </nav>
               </div>
             </aside>
- 
+            
             <div class="content-wrapper">
                 <section class="content-header">
                     <div class="container-fluid">
                         <div class="row mb-2">
                             <div class="col-sm-6">
-                                <h1>Registered Senior Citizen</h1>
+                                <h1>Monthly Budget</h1>
                             </div>
                             <div class="col-sm-6">
                                 <ol class="breadcrumb float-sm-right">
                                     <li class="breadcrumb-item"><a href="Home.aspx">Home</a></li>
-                                    <li class="breadcrumb-item active">Registered Senior Citizen</li>
+                                    <li class="breadcrumb-item active">View Monthly Budget</li>
                                 </ol>
                             </div>
                         </div>
@@ -144,23 +143,42 @@
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h3 class="card-title">Registered Senior Citizen List</h3>
-
+                                        <div class="col-sm-12 col-md-6">
+                                            <div id="example1_filter" class="dataTables_filter">
+                                                <label>Search:
+                                                    <asp:TextBox ID="txtsearch" type="search" class="form-control form-control-sm" placeholder="" 
+                                                    aria-controls="example1" runat="server"></asp:TextBox>
+                                                </label>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="card-body">
                                         <table id="example2" class="table table-bordered table-hover">
                                             <thead>
                                                 <tr>
-                                                    <th>Senior Citizen ID No.</th>
-                                                    <th>Name</th>
-                                                    <th>Birthdate</th>
-                                                    <th>Age</th>
-                                                    <th>Address</th>
-                                                    <th>Maritial Status</th>
-                                                    <th>Monthly Pension</th>
-                                                    <th>Action</th>
+                                                    <th>Barangay</th>
+                                                    <th>Date of Release</th>
+                                                    <th>Budget Pension</th>
+                                                    <th>Number of People Receive Pension</th>
+                                                    <th>Amount Spent</th>
                                                 </tr>
                                             </thead>
+                                            <tbody>
+                                                <tr class="odd">
+                                                    <td>Barangay</td>
+                                                    <td>September 12, 2019</td>
+                                                    <td>P 50 000.00</td>
+                                                    <td>52</td>
+                                                    <td>P 45 000.00</td>
+                                                </tr>
+                                                <tr class="even">
+                                                    <td>Barangay 2</td>
+                                                    <td>September 12, 2019</td>
+                                                    <td>P 50 000.00</td>
+                                                    <td>52</td>
+                                                    <td>P 49 000.00</td>
+                                                </tr>
+                                            </tbody>
                                         </table>
                                     </div>
                                 </div>
@@ -168,15 +186,11 @@
                         </div>
                     </div>
                 </section>
-
-
-
             </div>
+
             </div>
         </div>
     </form>
-
-
 
 <!-- jQuery -->
 <script src="../../plugins/jquery/jquery.min.js"></script>
@@ -217,6 +231,7 @@
     });
   });
 </script>
+
 
 </body>
 </html>

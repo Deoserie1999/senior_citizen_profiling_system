@@ -115,7 +115,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                                <a href="ViewBudget.aspx" class="nav-link">
                                     <p>View Monthly Budget</p>
                                 </a>
                             </li>
@@ -132,13 +132,13 @@
                             </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="pages/layout/top-nav.html" class="nav-link">
+                                <a href="SmsAnnounce.aspx" class="nav-link">
                                     <p>Send SMS Announcement</p>
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                                <a href="CalendarPension.aspx" class="nav-link">
                                     <p>Schedule of Receiving Pension</p>
                                 </a>
                             </li>
@@ -157,7 +157,7 @@
                         <div class="container-fluid">
                             <div class="row mb-2">
                                 <div class="col-sm-6">
-                                    <h1 class="m-0">Senior Citzen Profiling System</h1>
+                                    <h1 class="m-0">Senior Citizen Profiling System</h1>
                                 </div><!-- /.col -->
 
                                 <div class="col-sm-6">

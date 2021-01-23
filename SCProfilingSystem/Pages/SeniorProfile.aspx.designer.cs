@@ -33,6 +33,15 @@ namespace SCProfilingSystem.Pages
         protected global::System.Web.UI.WebControls.TextBox SeniorID;
 
         /// <summary>
+        /// picture control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image picture;
+
+        /// <summary>
         /// txtfirstname control.
         /// </summary>
         /// <remarks>
@@ -139,6 +148,15 @@ namespace SCProfilingSystem.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox province;
+
+        /// <summary>
+        /// btnview control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnview;
 
         /// <summary>
         /// btnedit control.

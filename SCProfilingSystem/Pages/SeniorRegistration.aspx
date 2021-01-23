@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SeniorRegistration.aspx.cs" Inherits="SCProfilingSystem.Pages.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SeniorRegistration.aspx.cs" Inherits="SCProfilingSystem.Pages.WebForm1" Async="true" %>
 
 <!DOCTYPE html>
 
@@ -165,7 +165,7 @@
                                         <div class="col-md-5">
                                             <div class="form-group">
                                             <label class="lead" for="SeniorID">Senior Citizen ID No.</label>
-                                            <asp:TextBox ID="SeniorID" placeholder="Senior Citizen ID No" class="form-control" runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="txtseniorID" placeholder="Senior Citizen ID No" class="form-control" runat="server"></asp:TextBox>
                                             </div>
                                         </div>
 
@@ -200,17 +200,11 @@
                                             </div>
                                             <div class="form-group">
                                                  <div class="form-group">
-                                                    <label for="rblGender" class="lead">Maritial Status</label>
-                                                    <asp:RadioButtonList  runat="server" ID="RadioButtonList1" RepeatDirection="Horizontal" CellSpacing="1" CellPadding="1" RepeatColumns="2">
+                                                    <label for="rblMS" class="lead">Maritial Status</label>
+                                                    <asp:RadioButtonList  runat="server" ID="rblMS" RepeatDirection="Horizontal" CellSpacing="1" CellPadding="1" RepeatColumns="2">
                                                         <asp:ListItem>SINGLE</asp:ListItem>
-                                                    </asp:RadioButtonList>
-                                                    <asp:RadioButtonList  runat="server" ID="RadioButtonList2" RepeatDirection="Horizontal" CellSpacing="1" CellPadding="1" RepeatColumns="2">
                                                         <asp:ListItem>MARRIED</asp:ListItem>
-                                                    </asp:RadioButtonList>
-                                                    <asp:RadioButtonList  runat="server" ID="RadioButtonList3" RepeatDirection="Horizontal" CellSpacing="1" CellPadding="1" RepeatColumns="2">
                                                         <asp:ListItem>WIDOW/WIDOWER</asp:ListItem>
-                                                    </asp:RadioButtonList>
-                                                    <asp:RadioButtonList  runat="server" ID="RadioButtonList4" RepeatDirection="Horizontal" CellSpacing="1" CellPadding="1" RepeatColumns="2">
                                                         <asp:ListItem>ANNULED</asp:ListItem>
                                                     </asp:RadioButtonList>
                                                 </div>
@@ -222,7 +216,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="lead" for="contactnum">Contact Number</label>
-                                                    <asp:TextBox ID="contactnum" placeholder="Contact Number" class="form-control" 
+                                                    <asp:TextBox ID="txtcontactnum" placeholder="Contact Number" class="form-control" 
                                                     runat="server"></asp:TextBox>
                                                 </div>
                                             </div>
@@ -230,7 +224,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="lead" for="religion">Religion</label>
-                                                    <asp:TextBox ID="religion" placeholder="Religion" class="form-control" 
+                                                    <asp:TextBox ID="txtreligion" placeholder="Religion" class="form-control" 
                                                     runat="server"></asp:TextBox>
                                                 </div>
                                             </div>
@@ -238,7 +232,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label class="lead" for="Address">Occupation</label>
-                                                    <asp:TextBox ID="occupation" placeholder="Occupation" class="form-control" 
+                                                    <asp:TextBox ID="txtoccupation" placeholder="Occupation" class="form-control" 
                                                     runat="server"></asp:TextBox>
                                                 </div>
                                             </div>
@@ -246,15 +240,15 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label class="lead" for="Address">Complete Address</label>
-                                                    <asp:TextBox ID="brgy" placeholder="Barangay" class="form-control" 
+                                                    <asp:TextBox ID="txtbarangay" placeholder="Barangay" class="form-control" 
                                                     runat="server"></asp:TextBox>
                                                 </div>
                                                 <div class="form-group">
-                                                    <asp:TextBox ID="municipality" placeholder="Municipality" class="form-control" 
+                                                    <asp:TextBox ID="txtmunicipality" placeholder="Municipality" class="form-control" 
                                                     runat="server"></asp:TextBox>
                                                 </div>
                                                 <div class="form-group">
-                                                    <asp:TextBox ID="province" placeholder="Province" class="form-control" 
+                                                    <asp:TextBox ID="txtprovince" placeholder="Province" class="form-control" 
                                                     runat="server"></asp:TextBox>
                                                 </div>
                                             </div>
@@ -267,7 +261,7 @@
                                             <div class="form-group">
                                                   <div class="col-12">
                                                      <asp:Button ID="btnregister" class="btn btn-success" 
-                                                     Style="float: right;" runat="server" Text="Register" />                                                    
+                                                     Style="float: right;" runat="server" Text="Register" OnClick="btnRegister_Onclick"/>                                                    
                                                   </div>
                                              </div>
 
