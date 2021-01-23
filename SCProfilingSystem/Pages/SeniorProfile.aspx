@@ -114,13 +114,13 @@
                             </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="pages/layout/top-nav.html" class="nav-link">
+                                <a href="SmsAnnounce.aspx" class="nav-link">
                                     <p>Send SMS Announcement</p>
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                                <a href="CalendarPension.aspx" class="nav-link">
                                     <p>Schedule of Receiving Pension</p>
                                 </a>
                             </li>
@@ -157,13 +157,20 @@
                                 <div class="row">
                                     <div class="col-md-6">
 
-                                        <div class="col-md-5">
-                                            <div class="form-group">
-                                            <label class="lead" for="SeniorID">Senior Citizen ID No.</label>
-                                            <asp:TextBox ID="SeniorID" class="form-control" disabled="" runat="server"></asp:TextBox>
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <label class="lead" for="SeniorID">Senior Citizen ID No.</label>
+                                                    <asp:TextBox ID="SeniorID" class="form-control" disabled="" runat="server"></asp:TextBox>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group float-right">
+                                                    <asp:Image ID="picture" class="profile-user-img img-fluid img-square" 
+                                                    src="../img/default-user-image.png"  runat="server" />
+                                                </div>
                                             </div>
                                         </div>
-
                                         <div class="col-md-11">
 
                                             <div class="form-group">
@@ -213,6 +220,7 @@
                                     </div>
 
                                     <div class="col-md-6">
+
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="lead" for="contactnum">Contact Number</label>
@@ -255,9 +263,13 @@
                                                     disabled="" runat="server"></asp:TextBox>
                                                 </div>
                                             </div>
-                                          
-                                           <div class="col-md-12">
+                                        </div>
+
+                                             <div class="col-md-12">
                                                 <div class="form-group float-right">
+                                                    <asp:Button ID="btnview" CssClass="btn btn-default"
+                                                      runat="server" Text="View Card" Onclick="btnshow_click" />    
+                                                    &nbsp;
                                                     <asp:Button ID="btnedit" CssClass="btn btn-primary"
                                                       runat="server" Text="EDIT" />                                                    
                                                         &nbsp;
@@ -266,7 +278,6 @@
                                                 </div>
                                            </div>
 
-                                        </div>
                                     </div>
                                 </div>
                             </div>
