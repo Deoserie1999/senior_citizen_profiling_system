@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SeniorProfile.aspx.cs" Inherits="SCProfilingSystem.Pages.SeniorProfile" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SeniorProfile.aspx.cs" Inherits="SCProfilingSystem.Pages.SeniorProfile" Async="true" %>
 
 <!DOCTYPE html>
 
@@ -207,8 +207,8 @@
                                             </div>
                                             <div class="form-group">
                                                  <div class="form-group">
-                                                    <label for="rblGender" class="lead">Maritial Status</label>
-                                                    <asp:RadioButtonList  runat="server" ID="RadioButtonList1" RepeatDirection="Horizontal" CellSpacing="1" CellPadding="1" RepeatColumns="2">
+                                                    <label for="rblMaritalStatus" class="lead">Maritial Status</label>
+                                                    <asp:RadioButtonList  runat="server" ID="rblMaritalStatus" RepeatDirection="Horizontal" CellSpacing="1" CellPadding="1" RepeatColumns="2">
                                                         <asp:ListItem>SINGLE</asp:ListItem>
                                                         <asp:ListItem>MARRIED</asp:ListItem>
                                                         <asp:ListItem>WIDOW/WIDOWER</asp:ListItem>
@@ -239,7 +239,7 @@
 
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <label class="lead" for="Address">Occupation</label>
+                                                    <label class="lead" for="occupation">Occupation</label>
                                                     <asp:TextBox ID="occupation" class="form-control" 
                                                     disabled="" runat="server"></asp:TextBox>
                                                 </div>
