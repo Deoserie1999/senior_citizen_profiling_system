@@ -146,7 +146,7 @@
                                     <div class="card-header">
                                     </div>
                                     <div class="card-body">
-<<<<<<< Updated upstream
+
                                         <asp:GridView runat="server" ID="gvRecords" CssClass="table table-bordered table-hover" AutoGenerateColumns="False" OnRowCommand="gvRecords_OnRowCommand">
                                             <Columns>
                                                 <asp:BoundField DataField="Id" HeaderText="ID" Visible="False" />
@@ -161,8 +161,7 @@
                                                 <asp:BoundField DataField="Province" HeaderText="Province" />
                                                 <asp:TemplateField HeaderText="Action">
                                                     <ItemTemplate>
-                                                        <asp:Button ID="btnView" runat="server" CausesValidation="false" CommandName="View"
-                                                                    Text="View" CommandArgument='<%# Eval("id") %>' />
+                                                        <asp:HyperLink ID="lnkView" runat='server' NavigateUrl='<%# $"~/Pages/SeniorProfile.aspx?Id={Eval("Id")}" %>'>View</asp:HyperLink>
                                                     </ItemTemplate>
                                                 </asp:TemplateField>
                                             </Columns>
@@ -199,22 +198,7 @@
                                             </thead>
 <<<<<<< Updated upstream
                                         </table>--%>
-=======
-                                            <tbody>
-                                                <tr>
-                                                    <th>1021452130</th>
-                                                    <th>Juan Dela Cruz</th>
-                                                    <th>05/25/1955</th>
-                                                    <th>65</th>
-                                                    <th>Male</th>
-                                                    <th>Poblacion Sapian, Capiz</th>
-                                                    <th>Farmer</th>
-                                                    <th>Married</th>
-                                                    <th><asp:Button ID="btnView" runat="server" Text="View" OnClick="btnView_Click" /></th>
-                                                </tr>
-                                            </tbody>
-                                        </table>
->>>>>>> Stashed changes
+
                                     </div>
                                 </div>
                             </div>

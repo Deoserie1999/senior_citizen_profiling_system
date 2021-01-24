@@ -45,5 +45,14 @@ namespace SCProfilingSystem.Repositories
                 return await connection.QueryAsync<SeniorsModel>(query);
             }
         }
+
+        public static async Task<IEnumerable<SeniorsModel>> GetProfileAsync()
+        {
+            using (IDbConnection connection = new MySqlConnection(DBConnectionString.GetConnectionString()))
+            {
+                string query = "select * from Seniors where id = @id";
+                return await connection.QueryAsync<SeniorsModel>(query);
+            }
+        }
     }
 }

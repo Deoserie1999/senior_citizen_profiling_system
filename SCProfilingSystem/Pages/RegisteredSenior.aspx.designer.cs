@@ -24,29 +24,12 @@ namespace SCProfilingSystem.Pages
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-<<<<<<< Updated upstream
         /// gvRecords control.
-=======
-        /// txtsearch control.
->>>>>>> Stashed changes
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< Updated upstream
         protected global::System.Web.UI.WebControls.GridView gvRecords;
-=======
-        protected global::System.Web.UI.WebControls.TextBox txtsearch;
-
-        /// <summary>
-        /// btnView control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnView;
->>>>>>> Stashed changes
     }
 }
