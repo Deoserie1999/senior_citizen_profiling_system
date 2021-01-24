@@ -45,8 +45,9 @@ namespace SCProfilingSystem.Pages
 
         protected void gvRecords_OnRowCommand(object sender, GridViewCommandEventArgs e)
         {
-            if (e.CommandName != "btnView") return;
-            int id = Convert.ToInt32(e.CommandArgument);
+            //if (e.CommandName != "btnView") return;
+            //Response.Redirect($"SeniorProfile.aspx?Id={gvRecords.SelectedRow.Cells[0].Text}");
         }
+
     }
 }

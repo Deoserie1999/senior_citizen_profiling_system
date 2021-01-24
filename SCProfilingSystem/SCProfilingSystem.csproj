@@ -251,6 +251,7 @@
     <Content Include="Pages\SeniorCard.aspx" />
     <Content Include="Pages\SeniorProfile.aspx" />
     <Content Include="Pages\SmsAnnouncement.aspx" />
+    <Content Include="Pages\UpdatePension.aspx" />
     <Content Include="Pages\ViewBudget.aspx" />
     <Content Include="plugins\bootstrap-colorpicker\css\bootstrap-colorpicker.css.map" />
     <Content Include="plugins\bootstrap-colorpicker\css\bootstrap-colorpicker.min.css.map" />
@@ -2286,6 +2287,13 @@
     </Compile>
     <Compile Include="Pages\SmsAnnouncement.aspx.designer.cs">
       <DependentUpon>SmsAnnouncement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UpdatePension.aspx.cs">
+      <DependentUpon>UpdatePension.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UpdatePension.aspx.designer.cs">
+      <DependentUpon>UpdatePension.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\ViewBudget.aspx.cs">
       <DependentUpon>ViewBudget.aspx</DependentUpon>

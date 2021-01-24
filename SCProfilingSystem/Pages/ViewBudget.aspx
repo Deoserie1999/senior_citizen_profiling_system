@@ -143,16 +143,20 @@
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-header">
-                                        <div class="col-sm-12 col-md-6">
-                                            <div id="example1_filter" class="dataTables_filter">
-                                                <label>Search:
-                                                    <asp:TextBox ID="txtsearch" type="search" class="form-control form-control-sm" placeholder="" 
-                                                    aria-controls="example1" runat="server"></asp:TextBox>
-                                                </label>
+                                    </div>
+                                    <div class="card-body">
+
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                             <div id="example1_filter" class="dataTables_filter">
+                                                 <label for="txtsearch">Search:
+                                                     <asp:TextBox ID="txtsearch" type="search" lass="form-control form-control-sm" placeholder="" 
+                                                      aria-controls="example1" runat="server"></asp:TextBox>
+                                                 </label>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card-body">
+
                                         <table id="example2" class="table table-bordered table-hover">
                                             <thead>
                                                 <tr>

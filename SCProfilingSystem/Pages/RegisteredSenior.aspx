@@ -144,10 +144,9 @@
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h3 class="card-title">Registered Senior Citizen List</h3>
-
                                     </div>
                                     <div class="card-body">
+
                                         <asp:GridView runat="server" ID="gvRecords" CssClass="table table-bordered table-hover" AutoGenerateColumns="False" OnRowCommand="gvRecords_OnRowCommand">
                                             <Columns>
                                                 <asp:BoundField DataField="Id" HeaderText="ID" Visible="False" />
@@ -162,26 +161,44 @@
                                                 <asp:BoundField DataField="Province" HeaderText="Province" />
                                                 <asp:TemplateField HeaderText="Action">
                                                     <ItemTemplate>
-                                                        <asp:Button ID="btnView" runat="server" CausesValidation="false" CommandName="View"
-                                                                    Text="View" CommandArgument='<%# Eval("id") %>' />
+                                                        <asp:HyperLink ID="lnkView" runat='server' NavigateUrl='<%# $"~/Pages/SeniorProfile.aspx?Id={Eval("Id")}" %>'>View</asp:HyperLink>
                                                     </ItemTemplate>
                                                 </asp:TemplateField>
                                             </Columns>
                                         </asp:GridView>
                                         <%--<table id="example2" class="table table-bordered table-hover">
+=======
+
+
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                             <div id="example1_filter" class="dataTables_filter">
+                                                 <label for="txtsearch">Search:
+                                                     <asp:TextBox ID="txtsearch" type="search" lass="form-control form-control-sm" placeholder="" 
+                                                      aria-controls="example1" runat="server"></asp:TextBox>
+                                                 </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                        <table id="example2" class="table table-bordered table-hover">
+>>>>>>> Stashed changes
                                             <thead>
                                                 <tr>
                                                     <th>Senior Citizen ID No.</th>
                                                     <th>Name</th>
                                                     <th>Birthdate</th>
                                                     <th>Age</th>
+                                                    <th>Gender</th>
                                                     <th>Address</th>
-                                                    <th>Maritial Status</th>
-                                                    <th>Monthly Pension</th>
+                                                    <th>Marital Status</th>
+                                                    <th>Occupation</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
+<<<<<<< Updated upstream
                                         </table>--%>
+
                                     </div>
                                 </div>
                             </div>
@@ -219,24 +236,6 @@
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
-<!-- Page specific script -->
-<script>
-  $(function () {
-    $("#example1").DataTable({
-      "responsive": true, "lengthChange": false, "autoWidth": false,
-      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "responsive": true,
-    });
-  });
-</script>
 
 </body>
 </html>
