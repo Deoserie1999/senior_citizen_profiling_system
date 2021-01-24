@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RegisteredSenior.aspx.cs" Inherits="SCProfilingSystem.Pages.RegisteredSenior" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RegisteredSenior.aspx.cs" Inherits="SCProfilingSystem.Pages.RegisteredSenior" Async="true" %>
 
 <!DOCTYPE html>
 
@@ -148,7 +148,27 @@
 
                                     </div>
                                     <div class="card-body">
-                                        <table id="example2" class="table table-bordered table-hover">
+                                        <asp:GridView runat="server" ID="gvRecords" CssClass="table table-bordered table-hover" AutoGenerateColumns="False" OnRowCommand="gvRecords_OnRowCommand">
+                                            <Columns>
+                                                <asp:BoundField DataField="Id" HeaderText="ID" Visible="False" />
+                                                <asp:BoundField DataField="SeniorID" HeaderText="Senior Citizen ID" />
+                                                <asp:BoundField DataField="FullName" HeaderText="Name" />
+                                                <asp:BoundField DataField="Dob" HeaderText="BirthDate" />
+                                                <asp:BoundField DataField="MaritalStatus" HeaderText="Marital Status" />
+                                                <asp:BoundField DataField="ContactNo" HeaderText="Contact No" />
+                                                <asp:BoundField DataField="Religion" HeaderText="Religion" />
+                                                <asp:BoundField DataField="Barangay" HeaderText="Barangay" />
+                                                <asp:BoundField DataField="Municipality" HeaderText="Municipality" />
+                                                <asp:BoundField DataField="Province" HeaderText="Province" />
+                                                <asp:TemplateField HeaderText="Action">
+                                                    <ItemTemplate>
+                                                        <asp:Button ID="btnView" runat="server" CausesValidation="false" CommandName="View"
+                                                                    Text="View" CommandArgument='<%# Eval("id") %>' />
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                            </Columns>
+                                        </asp:GridView>
+                                        <%--<table id="example2" class="table table-bordered table-hover">
                                             <thead>
                                                 <tr>
                                                     <th>Senior Citizen ID No.</th>
@@ -161,7 +181,7 @@
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
-                                        </table>
+                                        </table>--%>
                                     </div>
                                 </div>
                             </div>
