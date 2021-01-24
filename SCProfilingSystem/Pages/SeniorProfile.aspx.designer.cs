@@ -150,6 +150,15 @@ namespace SCProfilingSystem.Pages
         protected global::System.Web.UI.WebControls.TextBox province;
 
         /// <summary>
+        /// txtpension control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtpension;
+
+        /// <summary>
         /// btnview control.
         /// </summary>
         /// <remarks>

@@ -144,10 +144,9 @@
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h3 class="card-title">Registered Senior Citizen List</h3>
-
                                     </div>
                                     <div class="card-body">
+<<<<<<< Updated upstream
                                         <asp:GridView runat="server" ID="gvRecords" CssClass="table table-bordered table-hover" AutoGenerateColumns="False" OnRowCommand="gvRecords_OnRowCommand">
                                             <Columns>
                                                 <asp:BoundField DataField="Id" HeaderText="ID" Visible="False" />
@@ -169,19 +168,53 @@
                                             </Columns>
                                         </asp:GridView>
                                         <%--<table id="example2" class="table table-bordered table-hover">
+=======
+
+
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                             <div id="example1_filter" class="dataTables_filter">
+                                                 <label for="txtsearch">Search:
+                                                     <asp:TextBox ID="txtsearch" type="search" lass="form-control form-control-sm" placeholder="" 
+                                                      aria-controls="example1" runat="server"></asp:TextBox>
+                                                 </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                        <table id="example2" class="table table-bordered table-hover">
+>>>>>>> Stashed changes
                                             <thead>
                                                 <tr>
                                                     <th>Senior Citizen ID No.</th>
                                                     <th>Name</th>
                                                     <th>Birthdate</th>
                                                     <th>Age</th>
+                                                    <th>Gender</th>
                                                     <th>Address</th>
-                                                    <th>Maritial Status</th>
-                                                    <th>Monthly Pension</th>
+                                                    <th>Marital Status</th>
+                                                    <th>Occupation</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
+<<<<<<< Updated upstream
                                         </table>--%>
+=======
+                                            <tbody>
+                                                <tr>
+                                                    <th>1021452130</th>
+                                                    <th>Juan Dela Cruz</th>
+                                                    <th>05/25/1955</th>
+                                                    <th>65</th>
+                                                    <th>Male</th>
+                                                    <th>Poblacion Sapian, Capiz</th>
+                                                    <th>Farmer</th>
+                                                    <th>Married</th>
+                                                    <th><asp:Button ID="btnView" runat="server" Text="View" OnClick="btnView_Click" /></th>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+>>>>>>> Stashed changes
                                     </div>
                                 </div>
                             </div>
@@ -219,24 +252,6 @@
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
-<!-- Page specific script -->
-<script>
-  $(function () {
-    $("#example1").DataTable({
-      "responsive": true, "lengthChange": false, "autoWidth": false,
-      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "responsive": true,
-    });
-  });
-</script>
 
 </body>
 </html>

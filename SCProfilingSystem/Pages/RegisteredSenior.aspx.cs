@@ -48,5 +48,10 @@ namespace SCProfilingSystem.Pages
             if (e.CommandName != "btnView") return;
             int id = Convert.ToInt32(e.CommandArgument);
         }
+
+        protected void btnView_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SeniorProfile.aspx");
+        }
     }
 }

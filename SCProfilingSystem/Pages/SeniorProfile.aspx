@@ -208,7 +208,7 @@
                                             <div class="form-group">
                                                  <div class="form-group">
                                                     <label for="rblGender" class="lead">Maritial Status</label>
-                                                    <asp:RadioButtonList  runat="server" ID="RadioButtonList1" RepeatDirection="Horizontal" CellSpacing="1" CellPadding="1" RepeatColumns="1">
+                                                    <asp:RadioButtonList  runat="server" ID="RadioButtonList1" RepeatDirection="Horizontal" CellSpacing="1" CellPadding="1" RepeatColumns="2">
                                                         <asp:ListItem>SINGLE</asp:ListItem>
                                                         <asp:ListItem>MARRIED</asp:ListItem>
                                                         <asp:ListItem>WIDOW/WIDOWER</asp:ListItem>
@@ -261,6 +261,14 @@
                                                     <p>Province</p>
                                                     <asp:TextBox ID="province" class="form-control" 
                                                     disabled="" runat="server"></asp:TextBox>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="lead" for="txtpension"> Monthly Pension </label>
+                                                        <asp:TextBox ID="txtpension" class="form-control" 
+                                                        disabled="" runat="server"></asp:TextBox>
                                                 </div>
                                             </div>
                                         </div>
