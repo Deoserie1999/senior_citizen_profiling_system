@@ -62,7 +62,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="Registered.aspx" class="nav-link">
                                     <p>Registered Senior Citizen List</p>
                                 </a>
                             </li>
@@ -103,13 +103,13 @@
                             </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="pages/layout/top-nav.html" class="nav-link">
+                                <a href="SmsAnnouncement.aspx" class="nav-link">
                                     <p>Send SMS Announcement</p>
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                                <a href="CalendarPension.aspx" class="nav-link">
                                     <p>Schedule of Receiving Pension</p>
                                 </a>
                             </li>

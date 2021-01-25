@@ -67,7 +67,7 @@
                             </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="SeniorRegistration.aspx" class="nav-link">
                                     <p>Register Senior Citizen</p>
                                 </a>
                             </li>
@@ -91,13 +91,13 @@
                             </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="pages/layout/top-nav.html" class="nav-link">
+                                <a href="UpdatePension.aspx" class="nav-link">
                                     <p>Update Pension</p>
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                                <a href="ViewBudget.aspx" class="nav-link">
                                     <p>View Monthly Budget</p>
                                 </a>
                             </li>
@@ -195,7 +195,7 @@
                                             <div class="form-group">
                                                  <div class="form-group">
                                                     <label for="rblGender" class="lead">Gender</label>
-                                                    <asp:RadioButtonList  runat="server" ID="rblGender" RepeatDirection="Horizontal" CellSpacing="1" CellPadding="1" RepeatColumns="2">
+                                                    <asp:RadioButtonList  runat="server" ID="rblGender" RepeatDirection="Horizontal" CellSpacing="1"        CellPadding ="1" RepeatColumns="2">
                                                         <asp:ListItem>MALE</asp:ListItem>
                                                         <asp:ListItem>FEMALE</asp:ListItem>
                                                     </asp:RadioButtonList>
@@ -208,7 +208,7 @@
                                             <div class="form-group">
                                                  <div class="form-group">
                                                     <label for="rblMaritalStatus" class="lead">Maritial Status</label>
-                                                    <asp:RadioButtonList  runat="server" ID="rblMaritalStatus" RepeatDirection="Horizontal" CellSpacing="1" CellPadding="1" RepeatColumns="2">
+                                                    <asp:RadioButtonList runat="server" ID="rblMaritalStatus" RepeatDirection="Horizontal" CellSpacing="1" CellPadding="1" RepeatColumns="2">
                                                         <asp:ListItem>SINGLE</asp:ListItem>
                                                         <asp:ListItem>MARRIED</asp:ListItem>
                                                         <asp:ListItem>WIDOW/WIDOWER</asp:ListItem>

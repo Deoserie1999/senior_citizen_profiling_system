@@ -65,7 +65,7 @@
 
               <aside class="main-sidebar sidebar-dark-primary elevation-4">
               <!-- Brand Logo -->
-                  <a href="#" class="brand-link">
+                  <a href="Home.aspx" class="brand-link">
                      <img src="../img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8" />
                         <span class="brand-text font-weight-light"><b>Sapian</b></span>
                   </a>
@@ -185,7 +185,7 @@
                                      <div class="icon">
                                         <i class="far fa-user"></i>
                                      </div>
-                                      <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                                      <a href="RegisteredSenior.aspx" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                                   </div>
                                     </div>
 
@@ -201,7 +201,7 @@
                                      <div class="icon">
                                         <i class="fas fa-female"></i>
                                      </div>
-                                      <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                                      <a href="RegisteredSenior.aspx" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                                   </div>
                                     </div>
 
@@ -217,7 +217,7 @@
                                      <div class="icon">
                                         <i class="fas fa-male"></i>
                                      </div>
-                                      <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                                      <a href="RegisteredSenior.aspx" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                                   </div>
                                     </div>
 
