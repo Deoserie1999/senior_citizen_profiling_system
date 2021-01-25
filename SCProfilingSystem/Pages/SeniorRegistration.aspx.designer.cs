@@ -24,13 +24,13 @@ namespace SCProfilingSystem.Pages
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// SeniorID control.
+        /// txtseniorID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SeniorID;
+        protected global::System.Web.UI.WebControls.TextBox txtseniorID;
 
         /// <summary>
         /// txtfirstname control.
@@ -78,94 +78,67 @@ namespace SCProfilingSystem.Pages
         protected global::System.Web.UI.WebControls.TextBox txtDob;
 
         /// <summary>
-        /// RadioButtonList1 control.
+        /// rblMS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList1;
+        protected global::System.Web.UI.WebControls.RadioButtonList rblMS;
 
         /// <summary>
-        /// RadioButtonList2 control.
+        /// txtcontactnum control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList2;
+        protected global::System.Web.UI.WebControls.TextBox txtcontactnum;
 
         /// <summary>
-        /// RadioButtonList3 control.
+        /// txtreligion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList3;
+        protected global::System.Web.UI.WebControls.TextBox txtreligion;
 
         /// <summary>
-        /// RadioButtonList4 control.
+        /// txtoccupation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList4;
+        protected global::System.Web.UI.WebControls.TextBox txtoccupation;
 
         /// <summary>
-        /// contactnum control.
+        /// txtbarangay control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox contactnum;
+        protected global::System.Web.UI.WebControls.TextBox txtbarangay;
 
         /// <summary>
-        /// religion control.
+        /// txtmunicipality control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox religion;
+        protected global::System.Web.UI.WebControls.TextBox txtmunicipality;
 
         /// <summary>
-        /// occupation control.
+        /// txtprovince control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox occupation;
-
-        /// <summary>
-        /// brgy control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox brgy;
-
-        /// <summary>
-        /// municipality control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox municipality;
-
-        /// <summary>
-        /// province control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox province;
+        protected global::System.Web.UI.WebControls.TextBox txtprovince;
 
         /// <summary>
         /// fuPhoto control.

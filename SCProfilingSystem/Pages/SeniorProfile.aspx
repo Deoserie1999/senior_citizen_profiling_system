@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SeniorProfile.aspx.cs" Inherits="SCProfilingSystem.Pages.SeniorProfile" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SeniorProfile.aspx.cs" Inherits="SCProfilingSystem.Pages.SeniorProfile" Async="true" %>
 
 <!DOCTYPE html>
 
@@ -67,7 +67,7 @@
                             </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="SeniorRegistration.aspx" class="nav-link">
                                     <p>Register Senior Citizen</p>
                                 </a>
                             </li>
@@ -91,13 +91,13 @@
                             </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="pages/layout/top-nav.html" class="nav-link">
+                                <a href="UpdatePension.aspx" class="nav-link">
                                     <p>Update Pension</p>
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                                <a href="ViewBudget.aspx" class="nav-link">
                                     <p>View Monthly Budget</p>
                                 </a>
                             </li>
@@ -114,13 +114,13 @@
                             </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="pages/layout/top-nav.html" class="nav-link">
+                                <a href="SmsAnnounce.aspx" class="nav-link">
                                     <p>Send SMS Announcement</p>
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                                <a href="CalendarPension.aspx" class="nav-link">
                                     <p>Schedule of Receiving Pension</p>
                                 </a>
                             </li>
@@ -157,13 +157,20 @@
                                 <div class="row">
                                     <div class="col-md-6">
 
-                                        <div class="col-md-5">
-                                            <div class="form-group">
-                                            <label class="lead" for="SeniorID">Senior Citizen ID No.</label>
-                                            <asp:TextBox ID="SeniorID" class="form-control" disabled="" runat="server"></asp:TextBox>
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <label class="lead" for="SeniorID">Senior Citizen ID No.</label>
+                                                    <asp:TextBox ID="SeniorID" class="form-control" disabled="" runat="server"></asp:TextBox>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group float-right">
+                                                    <asp:Image ID="picture" class="profile-user-img img-fluid img-square" 
+                                                    src="../img/default-user-image.png"  runat="server" />
+                                                </div>
                                             </div>
                                         </div>
-
                                         <div class="col-md-11">
 
                                             <div class="form-group">
@@ -188,7 +195,7 @@
                                             <div class="form-group">
                                                  <div class="form-group">
                                                     <label for="rblGender" class="lead">Gender</label>
-                                                    <asp:RadioButtonList  runat="server" ID="rblGender" RepeatDirection="Horizontal" CellSpacing="1" CellPadding="1" RepeatColumns="2">
+                                                    <asp:RadioButtonList  runat="server" ID="rblGender" RepeatDirection="Horizontal" CellSpacing="1"        CellPadding ="1" RepeatColumns="2">
                                                         <asp:ListItem>MALE</asp:ListItem>
                                                         <asp:ListItem>FEMALE</asp:ListItem>
                                                     </asp:RadioButtonList>
@@ -200,8 +207,8 @@
                                             </div>
                                             <div class="form-group">
                                                  <div class="form-group">
-                                                    <label for="rblGender" class="lead">Maritial Status</label>
-                                                    <asp:RadioButtonList  runat="server" ID="RadioButtonList1" RepeatDirection="Horizontal" CellSpacing="1" CellPadding="1" RepeatColumns="1">
+                                                    <label for="rblMaritalStatus" class="lead">Maritial Status</label>
+                                                    <asp:RadioButtonList runat="server" ID="rblMaritalStatus" RepeatDirection="Horizontal" CellSpacing="1" CellPadding="1" RepeatColumns="2">
                                                         <asp:ListItem>SINGLE</asp:ListItem>
                                                         <asp:ListItem>MARRIED</asp:ListItem>
                                                         <asp:ListItem>WIDOW/WIDOWER</asp:ListItem>
@@ -213,6 +220,7 @@
                                     </div>
 
                                     <div class="col-md-6">
+
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="lead" for="contactnum">Contact Number</label>
@@ -231,7 +239,7 @@
 
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <label class="lead" for="Address">Occupation</label>
+                                                    <label class="lead" for="occupation">Occupation</label>
                                                     <asp:TextBox ID="occupation" class="form-control" 
                                                     disabled="" runat="server"></asp:TextBox>
                                                 </div>
@@ -255,9 +263,21 @@
                                                     disabled="" runat="server"></asp:TextBox>
                                                 </div>
                                             </div>
-                                          
-                                           <div class="col-md-12">
+
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="lead" for="txtpension"> Monthly Pension </label>
+                                                        <asp:TextBox ID="txtpension" class="form-control" 
+                                                        disabled="" runat="server"></asp:TextBox>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                             <div class="col-md-12">
                                                 <div class="form-group float-right">
+                                                    <asp:Button ID="btnview" CssClass="btn btn-default"
+                                                      runat="server" Text="View Card" Onclick="btnshow_click" />    
+                                                    &nbsp;
                                                     <asp:Button ID="btnedit" CssClass="btn btn-primary"
                                                       runat="server" Text="EDIT" />                                                    
                                                         &nbsp;
@@ -266,7 +286,6 @@
                                                 </div>
                                            </div>
 
-                                        </div>
                                     </div>
                                 </div>
                             </div>

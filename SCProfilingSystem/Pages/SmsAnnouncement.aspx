@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="SCProfilingSystem.Pages.Home" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SmsAnnouncement.aspx.cs" Inherits="SCProfilingSystem.Pages.SmsAnnouncement" %>
 
 <!DOCTYPE html>
 
@@ -6,7 +6,7 @@
 <head runat="server">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dashboard</title>
+  <title>SMS Announcement</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
@@ -28,12 +28,10 @@
   <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker.css" />
   <!-- summernote -->
   <link rel="stylesheet" href="../plugins/summernote/summernote-bs4.min.css" />
-
 </head>
-
 <body class="hold-transition sidebar-mini layout-fixed">
     <form id="form1" runat="server">
-        <div class="wrapper">
+          <div class="wrapper">
             <div class="sidebar">
             <!-- Navbar -->
             <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -150,138 +148,90 @@
               </div>
 
             </aside>
-                
-              <div class="content-wrapper">
+
+                <div class="content-wrapper">
                     <!-- Content Header (Page header) -->
                     <div class="content-header">
                         <div class="container-fluid">
                             <div class="row mb-2">
                                 <div class="col-sm-6">
-                                    <h1 class="m-0">Senior Citizen Profiling System</h1>
+                                    <h1 class="m-0">SMS Announcement</h1>
                                 </div><!-- /.col -->
 
                                 <div class="col-sm-6">
                                     <ol class="breadcrumb float-sm-right">
                                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                            <li class="breadcrumb-item active">Dashboard</li>
+                                            <li class="breadcrumb-item active">Sms Announcement</li>
                                     </ol>
                                 </div><!-- /.col -->
                             </div><!-- /.row -->
-                         </div><!-- /.container-fluid -->
-                      </div>
-                  <!-- Main content -->
-                     <section class="content">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-lg-3 col-6">
-                                 <!--small Box-->
-                                  <div class="small-box bg-info">
-                                     <div class="inner">
-                                         <h3>  150</h3>
-
-                                        <p>Total</p>
-                                        <p>Senior Citizen Registered</p>
-                                     </div>
-                                     <div class="icon">
-                                        <i class="far fa-user"></i>
-                                     </div>
-                                      <a href="RegisteredSenior.aspx" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                                  </div>
-                                    </div>
-
-                                <div class="col-lg-3 col-6">
-                                 <!--small Box-->
-                                  <div class="small-box bg-info">
-                                     <div class="inner">
-                                         <h3>  75</h3>
-
-                                        <p>Female</p> 
-                                        <p>Senior Citizen Registered</p>
-                                     </div>
-                                     <div class="icon">
-                                        <i class="fas fa-female"></i>
-                                     </div>
-                                      <a href="RegisteredSenior.aspx" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                                  </div>
-                                    </div>
-
-                                <div class="col-lg-3 col-6">
-                                 <!--small Box-->
-                                  <div class="small-box bg-info">
-                                     <div class="inner">
-                                         <h3>  75</h3>
-
-                                        <p>Male</p> 
-                                        <p>Senior Citizen Registered</p>
-                                     </div>
-                                     <div class="icon">
-                                        <i class="fas fa-male"></i>
-                                     </div>
-                                      <a href="RegisteredSenior.aspx" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                                  </div>
-                                    </div>
-
-                                    <div class="col-lg-3 col-6">
-                                 <!--small Box-->
-                                  <div class="small-box bg-info">
-                                     <div class="inner">
-                                         <h3>  75</h3>
-
-                                        <p>Today's</p> 
-                                        <p>Birthday</p>
-                                     </div>
-                                     <div class="icon">
-                                        <i class="fas fa-gift"></i>
-                                     </div>
-                                      <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                                  </div>
-
-                                  </div>
-                              </div>
-                          </div>
-                     </section>
+                      </div><!-- /.container-fluid -->
                   </div>
+  <section class="content">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card card-outline card-info">
+            <div class="card-header">
+              <h3 class="card-title">
+                Create SMS Announcement
+              </h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+                <div class="col-md-12">
 
-             </div>
+               <div class="form-group">
+                    <div class="col-md-6">
+                        <asp:Label ID="txtSendtolbl" runat="server" Text="Send To"></asp:Label>
+                        <asp:TextBox ID="txtSendto" CssClass="form-control" runat="server"></asp:TextBox>
+                    </div>
+                </div>
+                
+              <textarea id="summernote">
+                
+              </textarea>
+                <div class="form-group">
+                    <asp:Button ID="Send" runat="server" Text="Send" />
+                </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.col-->
+      </div>
+      <!-- ./row -->
+</section>
+
+              </div>
+
+            </div>
         </div>
     </form>
 
 
-
 <!-- jQuery -->
 <script src="../../plugins/jquery/jquery.min.js"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="../../plugins/jquery-ui/jquery-ui.min.js"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-    $.widget.bridge('uibutton', $.ui.button)
-</script>
 <!-- Bootstrap 4 -->
 <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- ChartJS -->
-<script src="../../plugins/chart.js/Chart.min.js"></script>
-<!-- Sparkline -->
-<script src="../../plugins/sparklines/sparkline.js"></script>
-<!-- JQVMap -->
-<script src="../../plugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="../../plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-<!-- jQuery Knob Chart -->
-<script src="../../plugins/jquery-knob/jquery.knob.min.js"></script>
-<!-- daterangepicker -->
-<script src="../../plugins/moment/moment.min.js"></script>
-<script src="../../plugins/daterangepicker/daterangepicker.js"></script>
-<!-- Tempusdominus Bootstrap 4 -->
-<script src="../../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
 <!-- Summernote -->
 <script src="../../plugins/summernote/summernote-bs4.min.js"></script>
-<!-- overlayScrollbars -->
-<script src="../../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-<!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="../../dist/js/pages/dashboard.js"></script>
+<!-- Page specific script -->
+<script>
+    $(function () {
+        // Summernote
+        $('#summernote').summernote()
+
+        // CodeMirror
+        CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
+            mode: "htmlmixed",
+            theme: "monokai"
+        });
+    })
+</script>
 
 </body>
 </html>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RegisteredSenior.aspx.cs" Inherits="SCProfilingSystem.Pages.RegisteredSenior" Async="true" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UpdatePension.aspx.cs" Inherits="SCProfilingSystem.Pages.UpdatePension" %>
 
 <!DOCTYPE html>
 
@@ -6,7 +6,7 @@
 <head runat="server">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Registered Senior Citizen List</title>
+  <title>Monthly Pension</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
@@ -19,10 +19,12 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/adminlte.min.css" />
 </head>
+
 <body class="hold-transition sidebar-mini layout-fixed">
     <form id="form1" runat="server">
         <div class="wrapper">
             <div class="sidebar">
+
             <!-- Navbar -->
             <nav class="main-header navbar navbar-expand navbar-white navbar-light">
             <!-- Left navbar links -->
@@ -33,14 +35,13 @@
                 </ul>
             </nav>
 
-              <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <aside class="main-sidebar sidebar-dark-primary elevation-4">
               <!-- Brand Logo -->
                   <a href="Home.aspx" class="brand-link">
                      <img src="../img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8" />
                         <span class="brand-text font-weight-light"><b>Sapian</b></span>
                   </a>
               
-            
               <!-- Sidebar -->
               <div class="sidebar">
                   <nav class="mt-2">
@@ -62,7 +63,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="Registered.aspx" class="nav-link">
+                                <a href="RegisteredSenior.aspx" class="nav-link">
                                     <p>Registered Senior Citizen List</p>
                                 </a>
                             </li>
@@ -103,7 +104,7 @@
                             </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="SmsAnnouncement.aspx" class="nav-link">
+                                <a href="SmsAnnounce.aspx" class="nav-link">
                                     <p>Send SMS Announcement</p>
                                 </a>
                             </li>
@@ -120,18 +121,17 @@
                   </nav>
               </div>
             </aside>
- 
             <div class="content-wrapper">
                 <section class="content-header">
                     <div class="container-fluid">
                         <div class="row mb-2">
                             <div class="col-sm-6">
-                                <h1>Registered Senior Citizen</h1>
+                                <h1>Monthly Pension</h1>
                             </div>
                             <div class="col-sm-6">
                                 <ol class="breadcrumb float-sm-right">
                                     <li class="breadcrumb-item"><a href="Home.aspx">Home</a></li>
-                                    <li class="breadcrumb-item active">Registered Senior Citizen</li>
+                                    <li class="breadcrumb-item active">View Monthly Pension</li>
                                 </ol>
                             </div>
                         </div>
@@ -147,29 +147,6 @@
                                     </div>
                                     <div class="card-body">
 
-                                        <asp:GridView runat="server" ID="gvRecords" CssClass="table table-bordered table-hover" AutoGenerateColumns="False" OnRowCommand="gvRecords_OnRowCommand">
-                                            <Columns>
-                                                <asp:BoundField DataField="Id" HeaderText="ID" Visible="False" />
-                                                <asp:BoundField DataField="SeniorID" HeaderText="Senior Citizen ID" />
-                                                <asp:BoundField DataField="FullName" HeaderText="Name" />
-                                                <asp:BoundField DataField="Dob" HeaderText="BirthDate" />
-                                                <asp:BoundField DataField="MaritalStatus" HeaderText="Marital Status" />
-                                                <asp:BoundField DataField="ContactNo" HeaderText="Contact No" />
-                                                <asp:BoundField DataField="Religion" HeaderText="Religion" />
-                                                <asp:BoundField DataField="Barangay" HeaderText="Barangay" />
-                                                <asp:BoundField DataField="Municipality" HeaderText="Municipality" />
-                                                <asp:BoundField DataField="Province" HeaderText="Province" />
-                                                <asp:TemplateField HeaderText="Action">
-                                                    <ItemTemplate>
-                                                        <asp:HyperLink ID="lnkView" runat='server' NavigateUrl='<%# $"~/Pages/SeniorProfile.aspx?Id={Eval("Id")}" %>'>View</asp:HyperLink>
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>
-                                            </Columns>
-                                        </asp:GridView>
-                                        <%--<table id="example2" class="table table-bordered table-hover">
-=======
-
-
                                     <div class="col-md-12">
                                         <div class="form-group">
                                              <div id="example1_filter" class="dataTables_filter">
@@ -182,38 +159,31 @@
                                     </div>
 
                                         <table id="example2" class="table table-bordered table-hover">
->>>>>>> Stashed changes
                                             <thead>
                                                 <tr>
-                                                    <th>Senior Citizen ID No.</th>
                                                     <th>Name</th>
-                                                    <th>Birthdate</th>
-                                                    <th>Age</th>
-                                                    <th>Gender</th>
                                                     <th>Address</th>
+                                                    <th>Date of Birth</th>
+                                                    <th>Gender</th>
                                                     <th>Marital Status</th>
                                                     <th>Occupation</th>
-                                                    <th>Action</th>
+                                                    <th>Monthly Pension</th>
                                                 </tr>
                                             </thead>
-<<<<<<< Updated upstream
-                                        </table>--%>
-
+                                            <tbody>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-
-
-
             </div>
+
             </div>
         </div>
     </form>
-
-
 
 <!-- jQuery -->
 <script src="../../plugins/jquery/jquery.min.js"></script>
@@ -236,6 +206,24 @@
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
+<!-- Page specific script -->
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
 
 </body>
 </html>
