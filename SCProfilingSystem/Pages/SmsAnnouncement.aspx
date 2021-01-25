@@ -63,7 +63,7 @@
 
               <aside class="main-sidebar sidebar-dark-primary elevation-4">
               <!-- Brand Logo -->
-                  <a href="#" class="brand-link">
+                  <a href="Home.aspx" class="brand-link">
                      <img src="../img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8" />
                         <span class="brand-text font-weight-light"><b>Sapian</b></span>
                   </a>
@@ -178,11 +178,21 @@
             </div>
             <!-- /.card-header -->
             <div class="card-body">
+                <div class="col-md-12">
+
+               <div class="form-group">
+                    <div class="col-md-6">
+                        <asp:Label ID="txtSendtolbl" runat="server" Text="Send To"></asp:Label>
+                        <asp:TextBox ID="txtSendto" CssClass="form-control" runat="server"></asp:TextBox>
+                    </div>
+                </div>
+                
               <textarea id="summernote">
-                Place <em>some</em> <u>text</u> <strong>here</strong>
+                
               </textarea>
                 <div class="form-group">
                     <asp:Button ID="Send" runat="server" Text="Send" />
+                </div>
                 </div>
             </div>
           </div>
