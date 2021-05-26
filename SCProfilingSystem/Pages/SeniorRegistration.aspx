@@ -240,8 +240,19 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label class="lead" for="Address">Complete Address</label>
-                                                    <asp:TextBox ID="txtbarangay" placeholder="Barangay" class="form-control" 
-                                                    runat="server"></asp:TextBox>
+                                                    <asp:DropDownList runat="server" ID="txtBarangay" CssClass="form-control">
+                                                        <asp:ListItem Value="">Barangay</asp:ListItem>  
+                                                        <asp:ListItem Value="Agsilab">Agsilab </asp:ListItem>  
+                                                        <asp:ListItem Value="Agtatacay Norte">Agtatacay Norte</asp:ListItem>  
+                                                        <asp:ListItem Value="Agtatacay Sur">Agtatacay Sur</asp:ListItem>  
+                                                        <asp:ListItem Value="Bilao">Bilao</asp:ListItem>  
+                                                        <asp:ListItem Value="Damayan">Damayan</asp:ListItem>  
+                                                        <asp:ListItem Value="Dapdapan">Dapdapan</asp:ListItem>  
+                                                        <asp:ListItem Value="Lonoy">Lonoy</asp:ListItem>  
+                                                        <asp:ListItem Value="Majanlud">Majanlud</asp:ListItem>  
+                                                        <asp:ListItem Value="Maninang">Maninang</asp:ListItem>  
+                                                        <asp:ListItem Value="Poblacion">Poblacion</asp:ListItem>  
+                                                    </asp:DropDownList>
                                                 </div>
                                                 <div class="form-group">
                                                     <asp:TextBox ID="txtmunicipality" placeholder="Municipality" class="form-control" 

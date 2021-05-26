@@ -114,13 +114,13 @@ namespace SCProfilingSystem.Pages
         protected global::System.Web.UI.WebControls.TextBox txtoccupation;
 
         /// <summary>
-        /// txtbarangay control.
+        /// txtBarangay control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtbarangay;
+        protected global::System.Web.UI.WebControls.DropDownList txtBarangay;
 
         /// <summary>
         /// txtmunicipality control.
