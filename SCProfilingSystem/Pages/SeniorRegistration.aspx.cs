@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using SCProfilingSystem.Models;
+﻿using SCProfilingSystem.Models;
 using SCProfilingSystem.Repositories;
+using System;
+using System.Globalization;
 
 namespace SCProfilingSystem.Pages
 {
@@ -24,7 +18,8 @@ namespace SCProfilingSystem.Pages
             rblMS.ClearSelection();
             txtcontactnum.Text = string.Empty;
             txtreligion.Text = string.Empty;
-            txtbarangay.Text = string.Empty;
+            txtoccupation.Text = string.Empty;
+            txtBarangay.Text = string.Empty;
             txtmunicipality.Text = string.Empty;
             txtprovince.Text = string.Empty;
             fuPhoto.Attributes.Clear();
@@ -46,7 +41,7 @@ namespace SCProfilingSystem.Pages
                     ContactNum = txtcontactnum.Text,
                     Religion = txtreligion.Text,
                     Occupation = txtoccupation.Text,
-                    Barangay = txtbarangay.Text,
+                    Barangay = txtBarangay.Text,
                     Municipality = txtmunicipality.Text,
                     Province = txtprovince.Text,
                     Photo = fuPhoto.FileBytes
